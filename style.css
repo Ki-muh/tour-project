@@ -15,3 +15,10 @@ p{
     text-indent: 2%;
     color: wheat;
 }
+#btn{
+    background-color:darkseagreen;
+    color: black;
+}
+#rst{
+    background-color: indianred;
+}
