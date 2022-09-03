@@ -2,3 +2,16 @@ html{
     background-image:url(https://i.pinimg.com/originals/7c/98/1a/7c981a6eccb242c2393ae52c5e1836ba.jpg);
     background-position: center;
 }
+h1 {
+    color: burlywood;
+    text-align: center;
+    font-size: xx-large;
+  }
+h2{
+    color: whitesmoke;
+    text-align: center;
+}
+p{
+    text-indent: 2%;
+    color: wheat;
+}
