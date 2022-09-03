@@ -5,11 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>MAC TOURS & TRAVELS</h1>
+        <div>
+            <h1>MAC TOURS & TRAVELS</h1>
+        </div>
         <h2>Explore Your World!</h2>
     </header>
+    <form class="form-container" id="fill" action="" method="POST">
+        <p>Fill In The Form To Book.</p>
+        <div>
+            <label for="name">Name</label>
+        </div>
+        <div>
+            <input type="text" placeholder="Your name" id="name">
+        </div>
+        <div>
+            <label for="phone">Phone</label>
+        </div>
+        <div>
+            <input type="tel" placeholder="Phone number" id="phone">
+        </div>
+        <div>
+            <label for="email">Email</label>
+        </div>
+        <div>
+            <input type="text" placeholder="Email Address" id="email">
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+        </div>
+        <div>
+            Male<input type="radio" name="gender" value="male"> Female<input type="radio" name="gender" value="female">
+        </div>
+        <br>
+        <div>
+            <button id="places" onclick="">Destination</button> 
+        </div>
+        <br>
+        <div>
+            Your Budget: <input type="number" placeholder="Amount in $" required>
+            <label for="payment">Payment Option</label>
+            <select name="Paying" id="payment">
+                <option value="choose">Choose</option>
+                <option value="ken">Till</option>
+                <option value="e-wallet">SKRILL</option>
+                <option value="upfront">Cash</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            Date of Travel: <input type="date">
+        </div>
+        <br>
+        <div>
+            <button type = "submit" value = "Book" id="btn">Book</button>
+            <button type = "reset" value="Clear Form" id="rst">Clear Form</button>
+        </div><br>
+        <div class="contact" id="tel">Telephone:
+            <a href="0712-345-678">0712-345-678</a>
+        </div>
+        <div class="contact" id="mail">E-mail:
+            <a href="mac.memories@toursntravel.com ">mac.memories@toursntravel.com</a>
+        </div>
+    </form>
+ 
 </body>
 </html>
