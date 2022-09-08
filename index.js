@@ -2,6 +2,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     let btn = document.getElementById('btn')
     btn.addEventListener ('click', () => alert('Congratulations! Booking was Successful.'))
+
+
     //submit comment button
     let button = document.getElementById('comment')
     comment.addEventListener('submit', e => {
@@ -11,3 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.reset()
     })
 })
+
+//remove the destination button
+document.getElementById('places').remove('button');
