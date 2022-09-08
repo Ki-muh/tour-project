@@ -2,6 +2,12 @@ html{
     background-image:url(https://i.pinimg.com/originals/7c/98/1a/7c981a6eccb242c2393ae52c5e1836ba.jpg);
     background-position: center;
 }
+form{
+    text-indent: 15%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    
+}
 h1 {
     color: burlywood;
     text-align: center;
@@ -12,8 +18,7 @@ h2{
     text-align: center;
 }
 p{
-    text-indent: 2%;
-    color: wheat;
+    text-indent: 20%;
 }
 #btn{
     background-color:darkseagreen;
