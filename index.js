@@ -1,18 +1,31 @@
-//addEventListener
+//addEventListener to book button
 document.addEventListener('DOMContentLoaded', () => {
     let btn = document.getElementById('btn')
     btn.addEventListener ('click', () => alert('Congratulations! Booking was Successful.'))
-
-
-    //submit comment button
-    let button = document.getElementById('comment')
-    comment.addEventListener('submit', e => {
-        e.preventDefault()
-        let addComment = document.getElementById('comment').value
-        console.log(addComment)
-        document.reset()
-    })
 })
 
-//remove the destination button
-document.getElementById('places').remove('button');
+//addEvent listener to submit feedback button
+const addFeedback = document.getElementById('feedback')
+addFeedback.addEventListener('add', addAFeedback)
+let addAFeedback = e => {
+    e.preventDefault()
+    newFeedback = e.target.value
+    if(newFeedback !== '') {
+        return newFeedback  
+    }
+}
+//add newFeedback
+const feedbackForm = getElementById('feedback-form')
+feedbackForm.addEventListener('submit',submitFeedback);
+const submitFeedback = (event) => {
+    event.preventDefault();
+    let newFeedbackAdded = document.createElement("li");
+    newCommentItem.innerText = newFeedback;
+    commentList.appendChild(newFeedbackAdded);
+    feedbackInput.value = "";
+}
+//fetching
+const getPlaces = document.getElementById('places')
+function getPlaces() {
+    fetch('')
+}
