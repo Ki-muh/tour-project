@@ -5,27 +5,27 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 //addEvent listener to submit feedback button
-const addFeedback = document.getElementById('feedback')
-addFeedback.addEventListener('add', addAFeedback)
-let addAFeedback = e => {
+feedbackInput.addEventListener('add', handleFeedback)
+let feedback = ""
+const handleFeedback = e => {
     e.preventDefault()
-    newFeedback = e.target.value
-    if(newFeedback !== '') {
-        return newFeedback  
+    feedback = e.target.value
+    if (feedback !== "") {
+        return feedback
     }
 }
-//add newFeedback
-const feedbackForm = getElementById('feedback-form')
-feedbackForm.addEventListener('submit',submitFeedback);
-const submitFeedback = (event) => {
-    event.preventDefault();
-    let newFeedbackAdded = document.createElement("li");
-    newCommentItem.innerText = newFeedback;
-    commentList.appendChild(newFeedbackAdded);
-    feedbackInput.value = "";
+
+async function getPlaces(){
+    let places = 'http://localhost:3000/geonames';
+    try {
+        let response = fetch(places,{
+            method : 'GET'
+        });
+        return await (await response).json();
+    }
+    catch(error){
+        console.log(error);
+    }
 }
-//fetching
-const getPlaces = document.getElementById('places')
-function getPlaces() {
-    fetch('')
-}
+
+init = () => getPlaces
