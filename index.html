@@ -71,20 +71,22 @@
         <div class="contact" id="mail">E-mail:
             <a href="mac.memories@toursntravel.com ">mac.memories@toursntravel.com</a>
         </div>
-        <div class="container">
-            <h3>Leave a Feedback</h3>
-            <ul id="feedback-list" class="feedback">
-                <li>Nice</li>
-            </ul>
-            <form id="feedback-form" class="feedback-form"></form>
-            <textarea placeholder="Add a Feedback"></textarea>
-            <div class="btn">
-                <input type="button" id="feedback"value="Feedback">
-                <button>Clear</button>
-            </div>
-        </div>
     </form>
-
+    <div class="container">
+        <h3>Leave a Feedback</h3>
+        <form>
+            <textarea placeholder="Feedback here"></textarea>
+            <div class="btn">
+                <input type="submit" id="post" value="Post">
+                <button>Cancel</button>
+            </div>
+            <div id="list">
+                <h4>Recent Feedback</h4>
+                <ul id="recents">
+                </ul>
+              </div>
+        </form>
+    </div>
 </body>
 <script src="index.js"></script>
 </html>

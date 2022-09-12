@@ -15,6 +15,7 @@ const handleFeedback = e => {
     }
 }
 
+//fetching
 async function getPlaces(){
     let places = 'http://localhost:3000/geonames';
     try {
