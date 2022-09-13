@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tour Project</title>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -20,19 +20,19 @@
             <label for="name">Name</label>
         </div>
         <div>
-            <input type="text" placeholder="Your name" id="name">
+            <input type="text" placeholder="Your name" id="name" required>
         </div>
         <div>
             <label for="phone">Phone</label>
         </div>
         <div>
-            <input type="tel" placeholder="Phone number" id="phone">
+            <input type="tel" placeholder="Phone number" id="phone" required>
         </div>
         <div>
             <label for="email">Email</label>
         </div>
         <div>
-            <input type="text" placeholder="Email Address" id="email">
+            <input type="text" placeholder="Email Address" id="email" required>
         </div>
         <div>
             <label for="gender">Gender</label>
@@ -42,28 +42,30 @@
         </div>
         <br>
         <div>
-            <label for="places">Choose A Destination</label>
-            <button id="tour">Randomize a Place</button>
+            <label for="places">Select Destination</label>
+            <select id="places" required>
+                <option></option>
+            </select>
         </div>
         <br>
         <div>
-            Your Budget: <input type="number" placeholder="Amount in $" id="pay">
+            Your Budget: <input type="number" placeholder="Amount in $" id="pay" required>
             <label for="payment">Payment Option</label>
-            <select name="Paying" id="payment">
+            <select name="Paying" id="payment" required>
                 <option value="choose">Choose</option>
-                <option value="ken">Till</option>
-                <option value="e-wallet">SKRILL</option>
+                <option value="ken">Till No.: 1234</option>
+                <option value="e-wallet">SKRILL Address: mac@skrill</option>
                 <option value="upfront">Cash</option>
             </select>
         </div>
         <br>
         <div>
-            Date of Travel: <input type="date">
+            Date of Travel: <input type="date" required>
         </div>
         <br>
         <div>
-            <button type = "button" value = "Book" id="btn">Book</button>
-            <button type = "reset" value="Clear Form" id="rst">Clear Form</button>
+            <button type="submit" id="btn">Book</button>
+            <button type = "reset" id="rst">Clear Form</button>
         </div><br>
         <div class="contact" id="tel">Telephone:
             <a href="0712-345-678">0712-345-678</a>

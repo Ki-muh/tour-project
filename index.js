@@ -1,32 +1,34 @@
+const submit = document.getElementById('btn')
+let postFeedback = document.getElementById('post')
+let feedbackList = document.getElementById('recents')
+let postInput = document.getElementsByClassName('textarea')
+
 //addEventListener to book button
-document.addEventListener('DOMContentLoaded', () => {
-    let btn = document.getElementById('btn')
-    btn.addEventListener ('click', () => alert('Congratulations! Booking was Successful.'))
+document.getElementById('btn').addEventListener('submit', e => {
+    e.preventDefault()
+     alert('Booking Was Successful!')
+    form.reset()
 })
 
-//addEvent listener to submit feedback button
-feedbackInput.addEventListener('add', handleFeedback)
-let feedback = ""
-const handleFeedback = e => {
-    e.preventDefault()
-    feedback = e.target.value
-    if (feedback !== "") {
-        return feedback
-    }
-}
+
+// //addEvent listener to submit feedback button
+postFeedback.addEventListener('submit', function() {
+    let list = document.createElement('li')
+    list.innerText = postInput.target.value
+    feedbackList.appendChild(list)
+    postInput.reset()
+})
 
 //fetching
-async function getPlaces(){
-    let places = 'http://localhost:3000/geonames';
-    try {
-        let response = fetch(places,{
-            method : 'GET'
-        });
-        return await (await response).json();
-    }
-    catch(error){
-        console.log(error);
-    }
-}
-
-init = () => getPlaces
+fetch('https://services2.arcgis.com/5I7u4SJE1vUr79JC/arcgis/rest/services/UniversityChapters_Public/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
+.then(response => response.json())
+.then(data => {
+    console.log(data.City)
+    let placesData = ''
+    data.map(values => {
+        placesData +=
+        '<option>`{values.City}`</option>'
+    document.getElementById('places').innerHTML = placesData
+    })
+    .catch(err => console.log(err))
+})
