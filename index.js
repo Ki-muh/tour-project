@@ -1,34 +1,41 @@
-const submit = document.getElementById('btn')
-// let postFeedback = document.getElementById('post')
-// let feedbackList = document.getElementById('recents')
-// let postInput = document.getElementsByClassName('textarea')
+//form submission
+const bookingForm = document.getElementById('fill');
 
-//addEventListener to book button
-document.getElementById('btn').addEventListener('submit', e => {
-    e.preventDefault()
-     alert('Booking Was Successful!')
-    form.reset()
-})
+bookingForm.addEventListener('submit', e => {
+    e.preventDefault();
+    bookingForm.reset();
+    alert('Booking Successful!');
+});
 
+//adding feedback
+const postButton = document.getElementById('post');
+const feedbackList = document.getElementById('list');
+const inputFeedback = document.getElementById('feedback');
 
-// //addEvent listener to submit feedback button
-postFeedback.addEventListener('submit', function() {
-    let list = document.createElement('li')
-    list.innerText = postInput.target.value
-    feedbackList.appendChild(list)
-    postInput.reset()
-})
+postButton.addEventListener('click', function() {
+    let list = document.createElement('p');
+    list.style = 'color: whitesmoke';
+    list.innerText = inputFeedback.value;
+    feedbackList.appendChild(list);
+});
 
 //fetching
-fetch('http://localhost:3000/geonames')
-.then(response => response.json())
-.then(data => {
-    console.log(data.name)
-    // let placesData = ''
-    // data.map(values => {
-    //     placesData +=
-    //     '<option>`{values.City}`</option>'
-    // document.getElementById('places').innerHTML = placesData
-    // })
-    // .catch(err => console.log(err))
-})
+document.addEventListener('DOMContentLoaded', () => {
+    const places = document.getElementById('places');
+
+    fetch('https://restcountries.com/v3.1/all')
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        let output = '';
+        data.forEach(country => {
+            output += `<option>${country.capital}</option>`;
+        });
+
+        places.innerHTML = output;
+    })
+    .catch(err => {
+        console.log(err);
+    });
+});
