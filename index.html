@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour Project</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -33,7 +33,7 @@
         </div>
         <div>
             <input type="text" placeholder="Email Address" id="email" required>
-        </div>
+        </div><br>
         <div>
             <label for="gender">Gender</label>
         </div>
@@ -42,9 +42,9 @@
         </div>
         <br>
         <div>
-            <label for="places">Select Destination</label>
+            <label for="places">Select Country</label>
             <select id="places" required>
-                <option>Mara</option>
+                
             </select>
         </div>
         <br>
@@ -75,11 +75,11 @@
         </div>
     </form>
     <div class="container">
-        <h3>Leave a Feedback</h3>
-        <form>
-            <textarea placeholder="Feedback here"></textarea>
+        <h3>Leave us a Feedback</h3>
+        <form id="form">
+            <textarea placeholder="Feedback here" id="feedback"></textarea>
             <div class="btn">
-                <input type="submit" id="post" value="Post">
+                <input type="button" id="post" value="Post">
                 <button>Cancel</button>
             </div>
             <div id="list">
