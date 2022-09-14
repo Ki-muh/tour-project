@@ -17,6 +17,7 @@ postButton.addEventListener('click', function() {
     list.style = 'color: whitesmoke';
     list.innerText = inputFeedback.value;
     feedbackList.appendChild(list);
+    inputFeedback.value = "";
 });
 
 //fetching
